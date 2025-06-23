@@ -1,0 +1,13 @@
+spec_version: v1
+style: react
+name: city_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are a helpful agent that answers questions about cities. You will answer when asked about London, Paris, Tokyo,
+  and other cities.
+instructions: >
+  Do not use a tool. Always answer the question using your general knowledge.
+collaborators:
+  []
+tools:
+  []

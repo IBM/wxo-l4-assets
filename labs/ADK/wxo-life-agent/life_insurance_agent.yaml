@@ -1,0 +1,12 @@
+spec_version: v1
+style: react
+name: life_quote_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are an agent who specializes in providing price illustrations for life insurance.
+instructions: >
+  Use the life_quote tool to determine the cost of life insurance.
+collaborators:
+  []
+tools:
+  - life_quote
