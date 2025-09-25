@@ -502,27 +502,8 @@
         });
     </script>
     <!-- Add the orchestrate script below this line   -->
- 
- <script>
-  window.wxOConfiguration = {
-    orchestrationID: "80de3001842a4c4a8da66f753569439d_d70085f1-3b25-4fe4-9ed8-3a225967ef1e",
-    hostURL: "https://us-south.watson-orchestrate.cloud.ibm.com",
-    rootElementID: "root",
-    deploymentPlatform: "ibmcloud",
-    crn: "crn:v1:bluemix:public:watsonx-orchestrate:us-south:a/80de3001842a4c4a8da66f753569439d:d70085f1-3b25-4fe4-9ed8-3a225967ef1e::",
-    chatOptions: {
-        agentId: "328d10f9-dce1-4c9b-9df4-175fe0cee0dd", 
-    }
-  };
-  setTimeout(function () {
-    const script = document.createElement('script');
-    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
-    script.addEventListener('load', function () {
-        wxoLoader.init();
-    });
-    document.head.appendChild(script);
-  }, 0);                     
-</script>
+
+    
 
     <!-- The orchestrate script must be above this line   -->
 </body>
