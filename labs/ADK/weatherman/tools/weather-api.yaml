@@ -19,7 +19,7 @@ paths:
          operationId: forecast
          tags:
             - Weather Forecast APIs
-         summary: current for coordinates
+         summary: current weather for coordinates
          description: Weather information for given WGS84 latitude and longitude coordinates.
          parameters:
             - name: latitude

@@ -1,0 +1,10 @@
+#Wxo SaaS Trial - Account Vending
+WO_DEVELOPER_EDITION_SOURCE=orchestrate
+WO_INSTANCE=<your instance URL>
+WO_API_KEY=<your API key>
+AUTHORIZATION_URL=https://iam.cloud.ibm.com/identity/token
+USE_SAAS_ML_TOOLS_RUNTIME
+
+#After starting and downloading the images, remove the comment on the line below to skip login to the image registry
+#WO_DEVELOPER_EDITION_SKIP_LOGIN=true
+
