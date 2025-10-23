@@ -1,0 +1,11 @@
+{
+  "version": "1",
+  "name": "wxo-api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.004779815673828125,
+  "filesCount": 16
+}

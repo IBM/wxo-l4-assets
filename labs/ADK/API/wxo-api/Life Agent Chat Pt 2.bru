@@ -1,0 +1,38 @@
+meta {
+  name: Life Agent Chat Pt 2
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://localhost:4321/v1/orchestrate/:agent_id/chat/completions
+  body: json
+  auth: inherit
+}
+
+params:path {
+  agent_id: 3ec92a45-59af-4055-9714-a0173ef17b37
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+  X-IBM-THREAD-ID: 406818c7-f4cf-4f17-bf91-bdaab876066f
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "stream": false
+  }
+}
+
+script:post-response {
+  
+  
+  
+}

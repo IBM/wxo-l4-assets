@@ -1,0 +1,22 @@
+meta {
+  name: Get Auth Token
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:4321/v1/auth/token
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  username: wxo.archer@ibm.com
+  password: watsonx
+}
+
+script:post-response {
+  const data = res.body;
+  
+  bru.setEnvVar("access_token", data.access_token);
+}

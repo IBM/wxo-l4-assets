@@ -1,0 +1,38 @@
+meta {
+  name: Weather Agent Chat Pt 2
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:4321/v1/orchestrate/:agent_id/chat/completions
+  body: json
+  auth: inherit
+}
+
+params:path {
+  agent_id: df6b11e6-3439-4321-a50f-165e2b358a11
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+  X-IBM-THREAD-ID: 37db5ddb-fc07-47df-a6a2-22e8f746b9c8
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the temperature there now?"
+      }
+    ],
+    "stream": false
+  }
+}
+
+script:post-response {
+  
+  
+  
+}

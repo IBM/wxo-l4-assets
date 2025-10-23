@@ -1,0 +1,37 @@
+meta {
+  name: Weather Agent Chat Pt 1
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:4321/v1/orchestrate/:agent_id/chat/completions
+  body: json
+  auth: inherit
+}
+
+params:path {
+  agent_id: df6b11e6-3439-4321-a50f-165e2b358a11
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the current temperature in Tokyo?"
+      }
+    ],
+    "stream": false
+  }
+}
+
+script:post-response {
+  
+  
+  
+}

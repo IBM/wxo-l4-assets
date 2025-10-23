@@ -1,0 +1,26 @@
+meta {
+  name: Get Tenant Access Token
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:4321/v1/auth/token?tenant_id={{tenant_id}}
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  tenant_id: {{tenant_id}}
+}
+
+body:form-urlencoded {
+  username: wxo.archer@ibm.com
+  password: watsonx
+}
+
+script:post-response {
+  const data = res.body;
+  
+  bru.setEnvVar("access_token", data.access_token);
+}

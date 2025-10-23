@@ -1,0 +1,25 @@
+meta {
+  name: Get Tenants
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:4321/v1/tenants
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+}
+
+script:post-response {
+  // get the developer edition tenant id
+  const tenant = res.body.filter(item => item.name === "wxo-dev")[0];
+  
+  // store the id into an environment variable
+  bru.setEnvVar("tenant_id", tenant.id);
+  
+  
+}

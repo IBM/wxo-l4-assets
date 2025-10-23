@@ -1,0 +1,21 @@
+meta {
+  name: Get Agents
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:4321/v1/orchestrate/agents
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+}
+
+script:post-response {
+  
+  
+  
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Get Thread Messages
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:4321/v1/threads/{{thread_id}}/messages
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+}
+
+vars:pre-request {
+  thread_id: 37db5ddb-fc07-47df-a6a2-22e8f746b9c8
+}
+
+script:post-response {
+  
+  
+  
+}

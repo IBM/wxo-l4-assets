@@ -1,0 +1,37 @@
+meta {
+  name: Life Agent Chat Pt 1
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://localhost:4321/v1/orchestrate/:agent_id/chat/completions
+  body: json
+  auth: inherit
+}
+
+params:path {
+  agent_id: 3ec92a45-59af-4055-9714-a0173ef17b37
+}
+
+headers {
+  Authorization: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'd like to know how much life insurance would cost, I'm 50 years old and want 150000 of cover"
+      }
+    ],
+    "stream": false
+  }
+}
+
+script:post-response {
+  
+  
+  
+}
