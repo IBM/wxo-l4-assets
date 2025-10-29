@@ -1,0 +1,43 @@
+{
+  "agent": "pos_support_agent",
+  "story": "Check POS_23 status and apply patch if needed",
+  "starting_sentence": "Can you check if POS_23 needs a patch?",
+  "goals": {
+    "get_terminal_info-1": [
+      "apply_emergency_patch-1"
+    ],
+    "apply_emergency_patch-1": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_terminal_info-1",
+      "tool_name": "get_terminal_info",
+      "args": {
+        "pos_terminal_id": "POS_23"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "apply_emergency_patch-1",
+      "tool_name": "apply_emergency_patch",
+      "args": {
+        "pos_terminal_id": "POS_23",
+        "patch_version": "v2.1.3",
+        "urgency": "critical",
+        "justification": "Security vulnerability"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The status of POS_23 is online and no patch is needed.",
+      "keywords": [
+        "online",
+        "no patch needed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+story,agent
+"Get status for POS_12 and tell me what you find",pos_support_agent
+"POS_31 is offline and needs emergency patch v2.1.3",pos_support_agent
+"Apply emergency patch v2.1.3 to POS_12",pos_support_agent
+"Check POS_23 status and apply patch if needed",pos_support_agent

@@ -1,0 +1,30 @@
+
+
+
+
+orchestrate tools import -k python -f analysis/tools/pos_tools.py
+orchestrate agents import -f analysis\agents\pos_support_agent.yaml
+
+
+
+orchestrate evaluations generate `
+  --stories-path analysis\data\pos_support_stories.csv `
+  --tools-path analysis\tools\pos_tools.py `
+  --output-dir analysis\data\test_cases `
+  -e env
+
+
+
+orchestrate evaluations evaluate --test-paths analysis\data\test_cases\pos_support_agent_test_cases --output-dir analysis\data\eval-results -e env
+
+Note that summarize must have all extra line breaks removed
+orchestrate evaluations analyze -d analysis\data\results\full-eval\2025-10-29_11-48-52 -e env
+
+
+
+
+
+Recorded data
+orchestrate evaluations record --output-dir analysis/chat_recordings -e env
+
+orchestrate evaluations evaluate --test-paths analysis\chat_recordings\13c87848-5786-4ba2-89af-0394a550654c\b0e47835-2fcc-4142-8fe5-8037db6cf7ec_annotated_data.json --output-dir analysis\data\results\chat -e env

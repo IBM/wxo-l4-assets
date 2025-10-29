@@ -1,0 +1,31 @@
+{
+  "agent": "pos_support_agent",
+  "story": "Get status for POS_12 and tell me what you find",
+  "starting_sentence": "I'd like to get the status for POS_12.",
+  "goals": {
+    "get_terminal_info-1": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_terminal_info-1",
+      "tool_name": "get_terminal_info",
+      "args": {
+        "pos_terminal_id": "POS_12"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The status for POS_12 is: maintenance, version v2.1.2, 2 issues, urgency medium",
+      "keywords": [
+        "maintenance",
+        "v2.1.2",
+        "2 issues",
+        "medium"
+      ]
+    }
+  ]
+}
