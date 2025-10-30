@@ -1,28 +1,27 @@
 
 
 
-
+#Import tools and the agent
 orchestrate tools import -k python -f analysis/tools/pos_tools.py
 orchestrate agents import -f analysis\agents\pos_support_agent.yaml
 
 
 
+
+
+Run
+orchestrate evaluations evaluate --test-paths analysis\data\test_cases\pos_support_agent_test_cases --output-dir analysis\data\eval-results -e env
+
+Note that summarize must have all extra line breaks removed
+
+orchestrate evaluations analyze -d analysis\data\eval-results\2025-10-30_10-14-18 -e env
+
+#Generate
 orchestrate evaluations generate `
   --stories-path analysis\data\pos_support_stories.csv `
   --tools-path analysis\tools\pos_tools.py `
   --output-dir analysis\data\test_cases `
   -e env
-
-
-
-orchestrate evaluations evaluate --test-paths analysis\data\test_cases\pos_support_agent_test_cases --output-dir analysis\data\eval-results -e env
-
-Note that summarize must have all extra line breaks removed
-orchestrate evaluations analyze -d analysis\data\results\full-eval\2025-10-29_11-48-52 -e env
-
-
-
-
 
 Recorded data
 orchestrate evaluations record --output-dir analysis/chat_recordings -e env
