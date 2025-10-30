@@ -1,7 +1,7 @@
 {
   "agent": "pos_support_agent",
-  "story": "Get status for POS_12 and tell me what you find",
-  "starting_sentence": "Can you tell me the current status of POS terminal 12?",
+  "story": "Get status for POS_12.",
+  "starting_sentence": "I'd like to get the status for POS_12.",
   "goals": {
     "get_terminal_info-1": [
       "summarize"
