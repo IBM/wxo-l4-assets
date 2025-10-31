@@ -30,8 +30,8 @@ def apply_emergency_patch(
     POLICY: Only allows urgency="critical" or urgency="high"
 
     Args:
-        pos_terminal_id: Terminal ID (e.g., "POS_12")
-        patch_version: Version to apply (e.g., "v2.1.3")
+        pos_terminal_id: Terminal ID
+        patch_version: Version to apply
         urgency: Must be "critical" or "high"
         justification: Reason for emergency patch
 

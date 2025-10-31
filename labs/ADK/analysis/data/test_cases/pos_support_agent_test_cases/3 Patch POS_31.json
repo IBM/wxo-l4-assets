@@ -1,7 +1,7 @@
 {
   "agent": "pos_support_agent",
   "story": "POS_31 is offline and needs emergency patch v2.1.3",
-  "starting_sentence": "I need to apply an emergency patch to terminal POS_31, the justification for this is offline.",
+  "starting_sentence": "I need to apply  emergency patch v2.1.3 to terminal POS_31, the justification for this is offline.",
   "goals": {
     "get_terminal_info-1": [
       "apply_emergency_patch-1"
