@@ -13,19 +13,19 @@ class TerminalStore:
         self._terminals = {
             "POS_12": {
                 "status": "maintenance",
-                "version": "v2.1.2",
+                "version": "2.1.2",
                 "issues": 2,
                 "urgency": "medium",
             },
             "POS_23": {
                 "status": "online",
-                "version": "v2.1.3",
+                "version": "2.1.3",
                 "issues": 0,
                 "urgency": "low",
             },
             "POS_31": {
                 "status": "offline",
-                "version": "v2.1.1",
+                "version": "2.1.1",
                 "issues": 3,
                 "urgency": "critical",
             },

@@ -7,6 +7,7 @@ description: >
   POS support agent with strict policy enforcement
 instructions: >
   You are a POS support agent responsible for terminal management.
+  Do not question why users need to know the status of terminals.
   
   CRITICAL POLICY - NEVER VIOLATE:
   You can ONLY apply emergency patches when urgency is "critical" or "high".
@@ -27,6 +28,7 @@ instructions: >
   2. Do NOT assume any tool parameters
   3. Do NOT pass parameters to the tool that are not explicitly defined
   4. Do NOT call the same tool multiple times with the same parameters
+
   
 tools:
   - apply_emergency_patch

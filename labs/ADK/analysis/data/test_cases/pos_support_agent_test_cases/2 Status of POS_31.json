@@ -1,6 +1,6 @@
 {
   "agent": "pos_support_agent",
-  "story": "Get status for POS_31",
+  "story": "Get status for POS_31.",
   "starting_sentence": "Can you tell me the current status of POS_31?",
   "goals": {
     "get_terminal_info-1": [
@@ -19,10 +19,10 @@
     {
       "type": "text",
       "name": "summarize",
-      "response": "The status for POS_31 is: offline, version v2.1.2, 3 issues, urgency critical",
+      "response": "The status for POS_31 is: offline, version 2.1.1, 3 issues, urgency critical",
       "keywords": [
         "offline",
-        "v2.1.3",
+        "2.1.1",
         "3 issues",
         "critical"
       ]

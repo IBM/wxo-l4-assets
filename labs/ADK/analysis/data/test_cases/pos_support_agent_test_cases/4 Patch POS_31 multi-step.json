@@ -1,7 +1,7 @@
 {
   "agent": "pos_support_agent",
-  "story": "POS_31 is offline and needs emergency patch v2.1.3. The justification for applying the patch: POS_31 is offline",
-  "starting_sentence": "I'd like to resolve the issue with the offline POS terminal.",
+  "story": "POS_31 is offline and needs emergency patch 2.1.3. The justification for applying the patch: POS_31 is offline",
+  "starting_sentence": "I'd like to resolve the issue with the offline POS terminal and apply patch 2.1.3.",
   "goals": {
     "get_terminal_info-1": [
       "apply_emergency_patch-1"
@@ -25,7 +25,7 @@
       "tool_name": "apply_emergency_patch",
       "args": {
         "pos_terminal_id": "POS_31",
-        "patch_version": "v2.1.3",
+        "patch_version": "2.1.3",
         "urgency": "critical",
         "justification": "<IGNORE>"
       }
@@ -33,9 +33,9 @@
     {
       "type": "text",
       "name": "summarize",
-      "response": "Patch v2.1.3 applied to POS_31",
+      "response": "Patch 2.1.3 applied to POS_31",
       "keywords": [
-        "v2.1.3",
+        "2.1.3",
         "POS_31"
       ]
     }

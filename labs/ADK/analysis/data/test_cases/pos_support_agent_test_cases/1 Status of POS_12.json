@@ -19,12 +19,9 @@
     {
       "type": "text",
       "name": "summarize",
-      "response": "The status for POS_12 is: maintenance, version v2.1.2, 2 issues, urgency medium",
+      "response": "The current status for POS_12 is maintenance.",
       "keywords": [
-        "maintenance",
-        "v2.1.2",
-        "2 issues",
-        "medium"
+        "maintenance"
       ]
     }
   ]
